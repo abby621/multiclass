@@ -1,4 +1,4 @@
-name: "GoogleNet_hotel_star_rating"
+name: "GoogleNet_hotel_star_rating_small"
 layer {
   name: "data"
   type: "Data"
@@ -933,7 +933,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 4
+    num_output: 3
     weight_filler {
       type: "xavier"
       std: 0.0009765625
@@ -1704,7 +1704,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 4
+    num_output: 3
     weight_filler {
       type: "xavier"
       std: 0.0009765625
@@ -2423,7 +2423,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 4
+    num_output: 3
     weight_filler {
       type: "xavier"
     }
