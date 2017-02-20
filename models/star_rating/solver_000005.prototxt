@@ -1,0 +1,14 @@
+net: "/project/focus/abby/multiclass/models/star_rating/train.prototxt"
+test_iter: 1
+test_interval: 1000
+base_lr: 0.000005
+lr_policy: "step"
+gamma: 0.1
+stepsize: 200000
+display: 20
+max_iter: 400000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "/project/focus/abby/multiclass/outputs/star_rating/snapshot_lr000005_"
+solver_mode: GPU
