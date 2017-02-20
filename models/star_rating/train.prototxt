@@ -13,7 +13,7 @@ layer {
     mirror: true
   }
   data_param {
-    source: "/project/focus/abby/multiclass/models/star_rating/train_lmdb"
+    source: "/project/focus/abby/multiclass/datasets/star_rating/train_lmdb"
     backend: LMDB
     batch_size: 64
   }
@@ -32,7 +32,7 @@ layer {
     mirror: true
   }
   data_param {
-    source: "/project/focus/abby/multiclass/models/star_rating/val_lmdb"
+    source: "/project/focus/abby/multiclass/datasets/star_rating/val_lmdb"
     backend: LMDB
     batch_size: 32
   }

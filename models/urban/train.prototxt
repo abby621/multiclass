@@ -13,7 +13,7 @@ layer {
     mirror: true
   }
   data_param {
-    source: "/project/focus/abby/multiclass/models/urban/train_lmdb"
+    source: "/project/focus/abby/multiclass/datasets/urban/train_lmdb"
     backend: LMDB
     batch_size: 64
   }
