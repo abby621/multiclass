@@ -32,7 +32,7 @@ layer {
     mirror: true
   }
   data_param {
-    source: "/project/focus/abby/multiclass/datasets/star_rating/small/val_lmdb"
+    source: "/project/focus/abby/multiclass/datasets/star_rating/small/overfit_lmdb"
     backend: LMDB
     batch_size: 32
   }

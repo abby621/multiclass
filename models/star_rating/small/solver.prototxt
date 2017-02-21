@@ -10,5 +10,5 @@ max_iter: 400000
 momentum: 0.9
 weight_decay: 0.0005
 snapshot: 5000
-snapshot_prefix: "/project/focus/abby/multiclass/outputs/star_rating/small/snapshot_lr00001_"
+snapshot_prefix: "/project/focus/abby/multiclass/outputs/star_rating/small/snapshot_overfitting_"
 solver_mode: GPU
