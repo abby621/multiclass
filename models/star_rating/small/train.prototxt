@@ -9,7 +9,7 @@ layer {
   }
   transform_param {
     crop_size: 224
-    mean_file: "/project/focus/abby/multiclass/datasets/mean.binaryproto"
+    mean_file: "/project/focus/abby/multiclass/datasets/star_rating/small/mean.binaryproto"
     mirror: true
   }
   data_param {
@@ -28,7 +28,7 @@ layer {
   }
   transform_param {
     crop_size: 224
-    mean_file: "/project/focus/abby/multiclass/datasets/mean.binaryproto"
+    mean_file: "/project/focus/abby/multiclass/datasets/star_rating/small/mean.binaryproto"
     mirror: true
   }
   data_param {
