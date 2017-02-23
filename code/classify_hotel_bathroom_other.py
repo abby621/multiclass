@@ -1,12 +1,7 @@
 import caffe
-import glob
 import os
-import scipy.io
 from PIL import Image
 import numpy as np
-from math import floor
-from scipy import stats
-import shutil
 import csv
 
 caffe.set_device(0)
