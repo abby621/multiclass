@@ -21,7 +21,8 @@ with open(im_path,'rU') as f:
     reader = csv.reader(f,delimiter=' ')
     imList = list(reader)
 
-cropSz = 224
+origSize = 256
+cropSize = 224
 batchSize = 10
 
 mean_im_path = '/project/focus/abby/hotelnet/models/places205CNN_mean.binaryproto'
@@ -34,7 +35,7 @@ mean_im = arr[0].mean(1).mean(1)
 new_im_path = im_path.split('.')[0] + '_roomsonly.txt'
 out_file = open(new_im_path,'a')
 
-net.blobs['data'].reshape(batchSize,3,cropSz,cropSz)
+net.blobs['data'].reshape(batchSize,3,cropSize,cropSize)
 transformer = caffe.io.Transformer({'data': net.blobs['data'].data.shape})
 transformer.set_mean('data', mean_im)
 transformer.set_transpose('data', (2,0,1))
@@ -45,7 +46,7 @@ pred = np.empty(len(imList))
 for ix in range(0,len(imList)):
     try:
         orig_im = caffe.io.load_image(imList[ix][0])
-        im_oversampled = caffe.io.oversample([caffe.io.resize_image(orig_im, (256,256))], (224,224))
+        im_oversampled = caffe.io.oversample([caffe.io.resize_image(orig_im, (origSize,origSize))], (cropSize,cropSize))
         caffe_input = np.asarray([transformer.preprocess('data', crop) for crop in im_oversampled])
         net.blobs['data'].data[...] = caffe_input
         out = net.forward()
