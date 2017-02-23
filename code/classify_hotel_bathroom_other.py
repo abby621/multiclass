@@ -18,7 +18,7 @@ with open(im_path,'rU') as f:
 
 origSize = 256
 cropSize = 224
-batchSize = 64
+batchSize = 128
 
 mean_im_path = '/project/focus/abby/hotelnet/models/places205CNN_mean.binaryproto'
 blob = caffe.proto.caffe_pb2.BlobProto()
@@ -54,7 +54,7 @@ for ix in range(0,numIms,batchSize):
         orig_im = caffe.io.load_image(imList[ctr][0])
         caffe_input[iy,:,:,:] = transformer.preprocess('data',orig_im)
         ctr += 1
-    
+
     net.blobs['data'].data[...] = caffe_input
     out = net.forward()
     prob = out['prob']
