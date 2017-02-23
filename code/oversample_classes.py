@@ -3,7 +3,7 @@ import numpy as np
 import shutil
 import random
 
-old_file_path = '/project/focus/abby/multiclass/datasets/star_rating/train.txt'
+old_file_path = '/project/focus/abby/multiclass/datasets/star_rating/train_roomsonly.txt'
 old_file = open(old_file_path,'rU')
 reader = csv.reader(old_file,delimiter=' ')
 imList = list(reader)
@@ -25,19 +25,19 @@ numOneTwoStar = oneAndTwoStar.shape[0]
 while numOneTwoStar < maxNum:
     print numOneTwoStar
     toAdd = imList[random.choice(oneAndTwoStar)]
-    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
+    new_file.write('%s %s\n'%(toAdd[0], toAdd[1]))
     numOneTwoStar += 1
 
 numThreeStar = threeStar.shape[0]
 while numThreeStar < maxNum:
     print numThreeStar
     toAdd = imList[random.choice(threeStar)]
-    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
+    new_file.write('%s %s\n'%(toAdd[0], toAdd[1]))
     numThreeStar += 1
 
 numFourStar = fourStar.shape[0]
 while numFourStar < maxNum:
     print numFourStar
     toAdd = imList[random.choice(fourStar)]
-    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
+    new_file.write('%s %s\n'%(toAdd[0], toAdd[1]))
     numFourStar += 1
