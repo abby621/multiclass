@@ -25,14 +25,14 @@ numOneTwoStar = oneAndTwoStar.shape[0]
 while numOneTwoStar < maxNum:
     print numOneTwoStar
     toAdd = imList[random.choice(oneAndTwoStar)]
-    new_file.write('%s %s\n' (toAdd[0] toAdd[1]))
+    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
     numOneTwoStar += 1
 
 numThreeStar = threeStar.shape[0]
 while numThreeStar < maxNum:
     print numThreeStar
     toAdd = imList[random.choice(threeStar)]
-    new_file.write('%s %s\n' (toAdd[0] toAdd[1]))
+    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
     numThreeStar += 1
 
 numFourStar = fourStar.shape[0]
