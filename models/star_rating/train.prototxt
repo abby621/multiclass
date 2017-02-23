@@ -2451,3 +2451,13 @@ layer {
     phase: TEST
   }
 }
+layer {
+  name: "loss3/top-2"
+  type: "Accuracy"
+  bottom: "loss3/star_rating_classifier"
+  bottom: "label"
+  top: "loss3/top-2"
+  include {
+    phase: TEST
+  }
+}
