@@ -39,5 +39,5 @@ numFourStar = fourStar.shape[0]
 while numFourStar < maxNum:
     print numFourStar
     toAdd = imList[random.choice(fourStar)]
-    new_file.write('%s %s\n', (toAdd[0], toAdd[1]))
+    new_file.write('%s %s\n' (toAdd[0], toAdd[1]))
     numFourStar += 1
